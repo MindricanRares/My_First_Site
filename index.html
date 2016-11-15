@@ -1,0 +1,328 @@
+        <!DOCTYPE HTML>
+        <!--
+        	ZeroFour by HTML5 UP
+        	html5up.net | @ajlkn
+        	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+        -->
+        <html>
+
+        <head>
+            <title>Welcome to the best School Camp Ever</title>
+            <meta charset="utf-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
+            <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+            <link id='stylesheet' rel="stylesheet" href="assets/css/main.css" />
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+            <script src="path/to/jquery.cookie.js"></script>
+            <script>
+                idleTime = 0;
+                popUpDisplayed = true;
+                $(document).ready(function () {
+                    $('#themes').change(function () {
+                        $("#stylesheet").attr({
+                            href: $('#themes').find(":selected").val()
+                        });
+                    });
+                    $limit = 1;
+                    if (popUpDisplayed == true) {
+                        $.get('form.html', function (data) {
+                            $('.messagepop').html(data);
+                        });
+
+                        function timerIncrement() {
+                            idleTime = idleTime + 1;
+                            if (idleTime > $limit && popUpDisplayed != false) {
+                                //alert('This will be a popup');
+                                $('#pop_background').fadeIn();
+                                $('#pop_box').fadeIn();
+                                idleTime = 0;
+                                popUpDisplayed = false;                    }
+                        }
+                        var idleInterval = setInterval(timerIncrement, 1000); // 1 second
+
+                        $(this).mousemove(function (e) {
+                            idleTime = 0;
+                        });
+                        $(this).keypress(function (e) {
+                            idleTime = 0;
+                        });
+
+                        $('#close').click(function () {
+                            $('#pop_background').fadeOut();
+                            $('#pop_box').fadeOut();
+                        });
+                        $('#pop_background').click(function () {
+                            $('#pop_background').fadeOut();
+                            $('#pop_box').fadeOut();
+                        });
+                    }
+
+                });
+            </script>
+            <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+            <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+        </head>
+
+        <body class="homepage">
+            <div id="pop_background"></div>
+            <div id="pop_box">
+                <span id="close">
+                   
+                    &times;
+                </span>
+                <p>
+                       Please subscribe to my site
+                </p>
+                <form action="index.html">
+                    <input type="text" value="Your email here"  onfocus="if (this.value=='Your email here') this.value='';"/>
+                </form>
+            </div>
+            <div id="page-wrapper">
+
+                <!-- Header -->
+                <div id="header-wrapper">
+                    <div class="container">
+
+                        <!-- Header -->
+                        <header id="header">
+                            <div class="inner">
+
+                                <!-- Logo -->
+                                <h1><a href="index.html" id="logo">Kids Camp</a></h1>
+
+                                <!-- Nav -->
+                                <nav id="nav">
+                                    <ul>
+                                        <li>
+                                            <!--
+        													<a href="#">Profil</a>
+        													<ul>
+        														<li><a href="#">Lorem ipsum dolor</a></li>
+        														<li><a href="#">Magna phasellus</a></li>
+        														<li>
+        															<a href="#">Phasellus consequat</a>
+        															<ul>
+        																<li><a href="#">Lorem ipsum dolor</a></li>
+        																<li><a href="#">Phasellus consequat</a></li>
+        																<li><a href="#">Magna phasellus</a></li>
+        																<li><a href="#">Etiam dolore nisl</a></li>
+        															</ul>
+        														</li>
+        														<li><a href="#">Veroeros feugiat</a></li>
+        													</ul>
+        -->
+                                        </li>
+                                        <li><a href="left-sidebar.html">Pricing List</a></li>
+                                        <li><a href="right-sidebar.html">Itinerary</a></li>
+                                        <li><a href="index.html">Team</a></li>
+                                        <li><a href="menu.html">Everyday Menu</a></li>
+                                    </ul>
+                                </nav>
+
+                            </div>
+                        </header>
+
+                        <!-- Banner -->
+                        <div id="banner">
+                            <h2> With over five years of experience, and recomandations from our customers we are the best place for your kids</h2>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Main Wrapper -->
+                <div id="main-wrapper">
+                    <div class="wrapper style1">
+                        <div class="inner">
+
+                            <!-- Feature 1 -->
+                            <section class="container box feature1">
+                                <div class="row">
+                                    <div class="4u 12u(mobile)">
+                                        <section>
+                                            <a href="#" class="image featured"><img src="images/last-year-pic.jpg" alt="" height="245" /></a>
+                                            <header>
+                                                <h3>2015</h3>
+                                                <p>Last year pictures</p>
+                                            </header>
+                                        </section>
+                                    </div>
+                                    <div class="4u 12u(mobile)">
+                                        <section>
+                                            <a href="#" class="image featured"><img src="images/2014-pic.jpg" alt="" /></a>
+                                            <header>
+                                                <h3>2014</h3>
+                                                <p>Best time with everyone</p>
+                                            </header>
+                                        </section>
+                                    </div>
+                                    <div class="4u 12u(mobile)">
+                                        <section>
+                                            <a href="#" class="image featured"><img src="images/2013-pic.jpg" alt="" /></a>
+                                            <header>
+                                                <h3>2013</h3>
+                                                <p>Having fun learning</p>
+                                            </header>
+                                        </section>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="12u">
+                                        <p>Every year we strive to become a better experience for out kids</p>
+                                    </div>
+                                </div>
+                            </section>
+
+                        </div>
+                    </div>
+                    <div class="wrapper style3">
+                        <div class="inner">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="8u 12u(mobile)">
+
+                                        <!-- Article list -->
+                                        <section class="box article-list">
+                                            <h2 class="icon fa-file-text-o">Recent Posts</h2>
+
+                                            <!-- Excerpt -->
+                                            <article class="box excerpt">
+                                                <a href="#" class="image left"><img src="images/the-_list_is_opened_pic.jpg" alt="" /></a>
+                                                <div>
+                                                    <header>
+                                                        <span class="date">July 24</span>
+                                                        <h3><a href="#">The list is opened</a></h3>
+                                                    </header>
+                                                    <p>Until the 17th of September you can enroll you kids in our summer camp. Hurry up we have limited spaces. All you have to do is to fill out a form and wait for our call. For more informations read the entire article.</p>
+                                                </div>
+                                            </article>
+
+                                            <!-- Excerpt -->
+                                            <article class="box excerpt">
+                                                <a href="#" class="image left"><img src="images/new_member_wanted_pic.jpg" alt="" /></a>
+                                                <div>
+                                                    <header>
+                                                        <span class="date">July 18</span>
+                                                        <h3><a href="#">We are looking for a new member for our team</a></h3>
+                                                    </header>
+                                                    <p>If you are young , energetic and love kids this is the place to be. For more informations read the entire article.</p>
+                                                </div>
+                                            </article>
+
+                                            <!-- Excerpt -->
+                                            <article class="box excerpt">
+                                                <a href="#" class="image left"><img src="images/thank_you_pic_resized.jpg" alt="" /></a>
+                                                <div>
+                                                    <header>
+                                                        <span class="date">July 14</span>
+                                                        <h3><a href="#">Thank you</a></h3>
+                                                    </header>
+                                                    <p>We would like to thank our last year volunteers.We couldn`t have done it whitout and would love to see more of you. Maybe we`ll see some of them in our team soon.Who knows?</p>
+                                                </div>
+                                            </article>
+
+                                        </section>
+                                    </div>
+                                    <div class="4u 12u(mobile)">
+
+                                        <!-- Spotlight -->
+                                        <section class="box spotlight">
+                                            <h2 class="icon fa-file-text-o">Spotlight</h2>
+                                            <article>
+                                                <a href="#" class="image featured"><img src="images/best_camp_pic.jpg" alt=""></a>
+                                                <header>
+                                                    <h3><a href="#">Best kids camp in Romania</a></h3>
+                                                    <p>The people have spoken.</p>
+                                                </header>
+                                                The guys at Times New Roman made a poll among 1000 readers asking what is the best place to leave your kids in the summer.
+                                                <footer>
+                                                    <a href="#" class="button alt icon fa-file-o">Continue Reading</a>
+                                                </footer>
+                                            </article>
+                                        </section>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer Wrapper -->
+                <div id="footer-wrapper">
+                    <footer id="footer" class="container">
+                        <div class="row">
+
+                            <div class="3u 12u(mobile)">
+
+
+
+                                <!-- Links -->
+                                <section>
+                                    <h2>Out parteners</h2>
+                                    <ul class="divided">
+                                        <li><a href="#">Milka</a></li>
+                                        <li><a href="#">Nescafe</a></li>
+                                        <li><a href="#">Dorna</a></li>
+                                        <li><a href="#">Coca-Cola</a></li>
+                                    </ul>
+                                </section>
+
+                            </div>
+                            <div class="6u 12u(mobile)">
+
+                                <!-- Contact -->
+                                <section>
+                                    <h2>Get in touch</h2>
+                                    <div>
+                                        <div class="row">
+                                            <div class="6u 12u(mobile)">
+                                                <dl class="contact">
+                                                    <dt>Twitter</dt>
+                                                    <dd><a href="#">@kidscamp</a></dd>
+                                                    <dt>Facebook</dt>
+                                                    <dd><a href="#">facebook.com/kidscamp</a></dd>
+                                                    <dt>Email</dt>
+                                                    <dd><a href="#">kidscamp@gmail.comd</a></dd>
+                                                </dl>
+                                            </div>
+                                            <div class="6u 12u(mobile)">
+                                                <dl class="contact">
+                                                    <dt>Address</dt>
+                                                    <dd>
+                                                        1234 Fictional Rd
+                                                        <br /> Nashville, TN 00000-0000
+                                                        <br /> USA
+                                                    </dd>
+                                                    <dt>Phone</dt>
+                                                    <dd>(000) 000-0000</dd>
+                                                </dl>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <select id="themes">
+                                        <option value="assets/css/main.css">White Theme</option>
+                                        <option value="assets/css/dark_theme.css">Dark Theme</option>
+                                    </select>
+                                </section>
+
+                            </div>
+                        </div>
+                    </footer>
+                </div>
+
+            </div>
+
+            <!-- Scripts -->
+
+            <script src="assets/js/jquery.min.js"></script>
+            <script src="assets/js/jquery.dropotron.min.js"></script>
+            <script src="assets/js/skel.min.js"></script>
+            <script src="assets/js/skel-viewport.min.js"></script>
+            <script src="assets/js/util.js"></script>
+            <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+            <script src="assets/js/main.js"></script>
+
+        </body>
+
+        </html>
